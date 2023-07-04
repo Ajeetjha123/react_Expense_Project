@@ -8,14 +8,16 @@ const ExpenseItem = (props) => {
     setExpense('100');
   } 
   return (
-    <Card className='expense-item'>
+    <li>
+     <Card className='expense-item'>
       <ExpenseDate date = {props.date} />
       <div className='expense-item__description'>
         <h2>{props.title}</h2>
         <div className='expense-item__price'>${expense}</div>
         <button className='expense-item__btn' onClick={clickHandler}>Change Amount</button>
       </div>
-    </Card>
+     </Card>
+    </li>
   );
 }
 export default ExpenseItem;
